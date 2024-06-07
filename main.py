@@ -18,7 +18,7 @@ async def main() -> None:
     bot: Bot = Bot(token=config.tgbot.token)
     dp: Dispatcher = Dispatcher()
 
-    # Пропускаем накопившиеся апдейты и запускаем polling
+    # Пропускаем накопившиеся апдейты и запускаем polling1
     await bot.delete_webhook(drop_pending_updates=True)
     await dp.start_polling(bot)
 
