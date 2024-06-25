@@ -78,7 +78,6 @@ def get_stats(user_id: int) -> str | None:
         result: dict
         for row in cursor:
             result = dict(row)
-        print(result)
         return str(f'Всего игр: {result['total_games']}\n'
                        f'Побед: {result['won']}\n'
                        f'Процент побед: {round(result['total_games']/result['won'], 2)}')
